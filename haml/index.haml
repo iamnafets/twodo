@@ -1,0 +1,30 @@
+!!! Strict
+
+%html
+  %head
+    %link{"rel" => "stylesheet", "href" => "css/twodo.css", "type" => "text/css"}
+    %script{:type => 'text/javascript', :src => 'js/json2.js'}
+    %script{:type => 'text/javascript', :src => 'js/jquery-1.4.2.js'}
+    %script{:type => 'text/javascript', :src => 'js/underscore-1.1.2.js'}
+    %script{:type => 'text/javascript', :src => 'js/backbone.js'}
+    %script{:type => 'text/javascript', :src => 'js/backbone-localstorage.js'}
+    %script{:type => 'text/javascript', :src => 'js/twodo.js'}
+
+    %title TwoDo
+
+#main
+  #leftnav
+    Testing nav
+  #content
+    %form
+      %input#new_task_name{:type => 'text'}
+      %input#new_task_submit{:type => 'submit'}
+  #active_list
+    Hel
+  %ul#all_list
+    %li
+      Nothing
+  #count
+    0
+  #footer
+    Copyright 2010 Stefan Mai
