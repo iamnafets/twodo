@@ -1,4 +1,7 @@
-all: twodo/index.html twodo/js/twodo.js twodo/css/twodo.css twodo/js twodo/css twodo/img
+all: twodo/index.html twodo/js/twodo.js twodo/css/twodo.css twodo/js twodo/css twodo/img readme.html
+
+readme.html: README.markdown
+	markdown $< > $@
 
 JSLIB=$(shell find js)
 CSSLIB=$(shell find css)
@@ -29,6 +32,7 @@ twodo/css/%.css: sass/%.sass
 	sass $< > $@
 
 twodo/%.html: haml/%.haml
+	mkdir -pv twodo
 	haml $< > $@
 
 twodo/js/%.js: coffee/%.coffee
